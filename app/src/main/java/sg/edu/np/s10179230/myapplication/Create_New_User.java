@@ -29,7 +29,7 @@ public class Create_New_User extends AppCompatActivity {
         String passInput=tvPassC.getText().toString();
 
         Pattern patternUser =Pattern.compile("^[A-Za-z]{6,12}$");
-        Pattern patternPass=Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$");
+        Pattern patternPass=Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])(?=.*\\W).*$");
 
         Matcher matcherUser=patternUser.matcher(userNameInput);
         Matcher matcherPass=patternPass.matcher(passInput);
